@@ -186,7 +186,7 @@
 
     state->state = (unsigned long)sym; // FIXME
     state->itemsPtr = stackbuf;
-    state->mutationsPtr = (__bridge void*)self;
+    state->mutationsPtr = &state->extra[0];
     return((sym) ? 1 : 0);
 }
 
